@@ -15,7 +15,7 @@
         // Проверяем наличие объекта Telegram.WebApp
         if (window.Telegram.WebApp) {
             const platform = window.Telegram.WebApp.platform;
-			const platform = window.Telegram.WebApp.version;
+			const version = window.Telegram.WebApp.version;
             document.getElementById("platform-info").innerText = `Платформа: ${platform}`;
 			document.getElementById("version-info").innerText = `Версия: ${version}`;
         } else {
