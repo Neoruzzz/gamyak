@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Web App</title>
+</head>
+<body>
+    <h1>Telegram WebApp</h1>
+    <p id="platform-info">Загрузка информации о платформе...</p>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        // Проверяем наличие объекта Telegram.WebApp
+        if (window.Telegram.WebApp) {
+            const platform = window.Telegram.WebApp.platform;
+            document.getElementById("platform-info").innerText = `Платформа: ${platform}`;
+        } else {
+            document.getElementById("platform-info").innerText = "WebApp не поддерживается в этом окружении.";
+        }
+    </script>
+</body>
+</html>
